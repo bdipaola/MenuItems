@@ -1,0 +1,28 @@
+<div class="container">
+	<h3>Menu: <%= @menu.name %></h3>
+	<div class="row">
+		<div class="col-sm-4">
+			<h3>Items:</h3>
+			<% @menu.items.each do |item| %>
+				<ul>
+					<li><%= item.item_name %>: <%= item.price %></li>
+				</ul>
+			<% end %>
+		</div>
+		<div class="col-sm-8">
+			<h3>Combination that totals to <%= @menu.target_price %></h3>
+			<% if @subset_items.any? %>
+				<% @subset_items.each do |item| %>
+					<ul>
+						<li><%= item.item_name %>: <%= item.price %></li>
+					</ul>
+				<% end %>
+			<% end %>
+			<% if @subset_items.empty? %>
+				<h4>No combination of items for <%= @menu.target_price %></h4> 
+			<% end %>
+			<br>
+			<a href="<%= root_path %>" class="btn btn-primary" role="button">Go Home</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+	<h1>Add Menu</h1>
+	<p>All Menus must be given a name and the file selected should be formatted as plain text.</p>
+
+	<%= form_for @menu, url: menus_path, html: { multipart: true } do |form| %>
+	  <%= form.label :name, :required => true %><br>
+	  <%= form.text_field :name %><br>
+	  <%= form.file_field :menu_file %><br><br>
+	  <%= form.submit %>
+	<% end %>
+
+	<% if @menu.errors[:file_present].any? || @menu.errors[:name].any? %>
+		<p><%= @menu.errors[:file_present].first %></p>
+		<p><%= @menu.errors[:name].first %></p>
+	<% end %>
+</div>

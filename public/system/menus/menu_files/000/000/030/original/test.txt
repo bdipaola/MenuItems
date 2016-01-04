@@ -1,0 +1,20 @@
+given an array of strings, print “YES” or “NO” if the string has a valid enclosure of brackets often used in a programming language
+	e.g. (), {}, [] or ({()})
+
+2. given the input
+
+5
+ab
+aabb
+abc
+xyyx
+
+give the number of changes a person would need to make to string A given string B to make string B match String A. No adding or deleting to string A can be done, only substitutions? Use -1 if it is not possible, 0 if no changes needed
+
+the first number represents the number of cases
+
+string A and B can only have one or less characters in length difference
+
+in example 3, this would not be possible
+
+3. Something on binary trees and taking what is given in a tree and returning the sequence if you were to write it out in some way.

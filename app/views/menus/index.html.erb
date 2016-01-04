@@ -1,0 +1,13 @@
+<div class="container">
+	<h2>Menu Choices</h2>
+	<p>Your application to find an item or set of items that total your ideal price!</p>
+
+	<h3>Select a Menu</h3>
+	<% @menus.each do |menu| %>
+		<ul>
+			<li><%= link_to "#{menu.name}", menu_path(menu) %></li>
+		</ul>
+	<% end %>
+	<br>
+	<a href="<%= new_menu_path %>" class="btn btn-primary" role="button">Add Menu</a>
+</div>
