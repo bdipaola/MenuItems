@@ -10,7 +10,7 @@
 	<% end %>
 
 	<% if @menu.errors[:file_present].any? || @menu.errors[:name].any? %>
-		<p><%= @menu.errors[:file_present].first %></p>
-		<p><%= @menu.errors[:name].first %></p>
+		<p class="text-danger"><%= @menu.errors[:file_present].first %></p>
+		<p class="text-danger"><%= @menu.errors[:name].first %></p>
 	<% end %>
 </div>

@@ -17,7 +17,7 @@ class Menu < ActiveRecord::Base
 	after_create :create_items
 	
 	def file_present
-		if !menu_file.present?
+		if !menu_file.present? || !['text/plain'].include?(self.menu_file_content_type)
 			errors.add(:file_present, "A plain text file must be selected in order to create a new menu.")
 		end
 	end
